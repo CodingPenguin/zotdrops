@@ -40,50 +40,45 @@ def drop():
         location_name = request.form['locationName']
         location_coordinates = request.form['locationCoords']
         
+        if ZotdropsCollection.find_one({'_id': date}):
+            #update
+            update_object = \
+            {
+                'time': time, 
+                'dropper_name': dropper_name, 
+                'location_name': location_name, 
+                'location_coordinates': 
+                    {
+                    'latitude': location_coordinates['lat'], 
+                    'longitude': location_coordinates['lng']
+                    }
+            }
+            ZotdropsCollection.update_one({'_id': date}, {'$push': {'drops': update_object }})
+            
+        else:
+            #insert
+            insert_object = \
+            {
+            '_id': date, 
+            'drops': 
+                [
+                    {
+                    'time': time, 
+                    'dropper_name': dropper_name, 
+                    'location_name': location_name, 
+                    'location_coordinates': 
+                        {
+                        'latitude': location_coordinates['lat'], 
+                        'longitude': location_coordinates['lng']
+                        }
+                    }
+                ]
+            }
+            ZotdropsCollection.insert_one(insert_object)
+            
+            
         #drops_dict[date].append({'time': time, 'dropper_name': dropper_name, 'location_name': location_name, 'location_coordinate':location_coordinates})
         
-
-'''TODO MAP STUFF'''
-
-# calendar of upcoming petrdrops
-
-#key = name of dropper, value = Drop(time, dropper_name, location_name, location_coordinates)
-class Drop:
-    def __init__(self, time, dropper_name, location_name, location_coordinates):
-        self.time = time
-        self.dropper = dropper_name
-        self.location_name = location_name
-        self.location_coordinates = location_coordinates
-    
-    def get_time(self):
-        return self.time
-    
-    def get_dropper_name(self):
-        return self.dropper
-
-    def get_location_name(self):
-        return self.location_name
-
-    def get_location_coordinates(self):
-        return self.location_coordinates
-
-
-#testing database adding
-test_object = {
-    '_id': 'tuesday',
-    'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
-}
-# test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
-# test_date = 'tuesday'
-# insertion = {
-#     test_date: test_object
-# }
-
-
-print(ZotdropsCollection.insert_one(test_object))
-
-
-''' petr droppers'''
 
 # admin account login
 
@@ -93,6 +88,50 @@ def signin():
         if request.form['password'] == 'admin':
             return "200"
     return '403'
+
+    
+#'''TODO MAP STUFF'''
+
+# calendar of upcoming petrdrops
+
+#key = name of dropper, value = Drop(time, dropper_name, location_name, location_coordinates)
+# class Drop:
+#     def __init__(self, time, dropper_name, location_name, location_coordinates):
+#         self.time = time
+#         self.dropper = dropper_name
+#         self.location_name = location_name
+#         self.location_coordinates = location_coordinates
+    
+#     def get_time(self):
+#         return self.time
+    
+#     def get_dropper_name(self):
+#         return self.dropper
+
+#     def get_location_name(self):
+#         return self.location_name
+
+#     def get_location_coordinates(self):
+#         return self.location_coordinates
+
+
+#testing database adding
+# test_object = {
+#     '_id': 'tuesday',
+#     'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+# }
+# test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+# test_date = 'tuesday'
+# insertion = {
+#     test_date: test_object
+# }
+
+
+# print(ZotdropsCollection.insert_one(test_object))
+
+
+''' petr droppers'''
+
     
 # @app.route("/verify", methods=["POST"])
 # def verify():
