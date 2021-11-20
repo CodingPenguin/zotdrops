@@ -1,3 +1,4 @@
+import json
 from flask import Flask
 from flask import request
 from flask_cors import CORS
@@ -18,16 +19,20 @@ drops_dict: dict = {}
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
-  
-@app.route("/drop", methods=['POST'])
+
+@app.route("/drops", methods=['GET', 'POST'])
 def drop():
-    date = request.form['date']
-    time = request.form['time']
-    dropper_name = request.form['dropperName']
-    location_name = request.form['locationName']
-    location_coordinates = request.form['locationCoords']
+    if request.method == 'GET':
+        return json.dumps(drops_dict)
     
-    drops_dict[date] = Drop(time, dropper_name, location_name, location_coordinates)
+    if request.method == 'POST':
+        date = request.form['date']
+        time = request.form['time']
+        dropper_name = request.form['dropperName']
+        location_name = request.form['locationName']
+        location_coordinates = request.form['locationCoords']
+        
+        drops_dict[date] = Drop(time, dropper_name, location_name, location_coordinates)
         
     
 '''TODO MAP STUFF'''
