@@ -40,7 +40,7 @@ def drop():
         location_name = request.form['locationName']
         location_coordinates = request.form['locationCoords']
         
-        drops_dict[date].append({'time': time, 'dropper_name': dropper_name, 'location_name': location_name, 'location_coordinate':location_coordinates})
+        #drops_dict[date].append({'time': time, 'dropper_name': dropper_name, 'location_name': location_name, 'location_coordinate':location_coordinates})
         
 
 '''TODO MAP STUFF'''
@@ -68,16 +68,19 @@ class Drop:
         return self.location_coordinates
 
 
-#database stuff
-test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
-test_date = 'tuesday'
-insertion = {
-    test_date: test_object
+#testing database adding
+test_object = {
+    '_id': 'tuesday',
+    'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
 }
+# test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+# test_date = 'tuesday'
+# insertion = {
+#     test_date: test_object
+# }
 
-#print(insertion[test_date])
-#ZotdropsCollection.insert_one(insertion)
-print(ZotdropsCollection.insert_one(insertion))
+
+print(ZotdropsCollection.insert_one(test_object))
 
 
 ''' petr droppers'''
