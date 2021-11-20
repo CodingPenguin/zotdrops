@@ -135,16 +135,3 @@ test_object = {
 
 
 
-''' petr droppers'''
-
-    
-# @app.route("/verify", methods=["POST"])
-# def verify():
-#     if (users[request.form['username']] != None):
-#         if (users[request.form['username']] == request.form['password']): 
-#             return "200"
-#     return "403"
-
-# verify legit dropper (done previous drop via insta or discord before)
-
-#
