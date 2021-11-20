@@ -1,12 +1,20 @@
 import json
 from flask import Flask
 from flask import request
+from collections import defaultdict
 from flask_cors import CORS
+from pymongo import MongoClient
+
+#mongodb database info
+client = MongoClient("mongodb+srv://caroliyw:hydroflask@cluster0.2w26s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+Zotdropdb = client.zotdrops
+ZotdropsCollection = Zotdropdb.drops
 
 app = Flask(__name__)
 CORS(app)
 
-drops_dict: dict = {}
+
+drops_dict: dict = defaultdict(list)
 
 # request.form = {
 #     'date': '',
@@ -32,7 +40,7 @@ def drop():
         location_name = request.form['locationName']
         location_coordinates = request.form['locationCoords']
         
-        drops_dict[date] = Drop(time, dropper_name, location_name, location_coordinates)
+        drops_dict[date].append({'time': time, 'dropper_name': dropper_name, 'location_name': location_name, 'location_coordinate':location_coordinates})
         
 
 '''TODO MAP STUFF'''
@@ -60,9 +68,16 @@ class Drop:
         return self.location_coordinates
 
 
+#database stuff
+test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+test_date = 'tuesday'
+insertion = {
+    test_date: test_object
+}
 
-# pin current drop locations
-
+#print(insertion[test_date])
+#ZotdropsCollection.insert_one(insertion)
+print(ZotdropsCollection.insert_one(insertion))
 
 
 ''' petr droppers'''
