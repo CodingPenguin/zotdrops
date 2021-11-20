@@ -31,7 +31,11 @@ def hello_world():
 @app.route("/drops", methods=['GET', 'POST'])
 def drop():
     if request.method == 'GET':
-        return json.dumps(drops_dict)
+        collection_object = ZotdropsCollection.find()
+        collection_list = [things for things in collection_object]
+        # return_item = json.dumps(collection_list)
+        # print(return_item)
+        return json.dumps(collection_list)
     
     if request.method == 'POST':
         date = request.form['date']
@@ -89,7 +93,7 @@ def signin():
             return "200"
     return '403'
 
-    
+
 #'''TODO MAP STUFF'''
 
 # calendar of upcoming petrdrops
@@ -115,19 +119,20 @@ def signin():
 #         return self.location_coordinates
 
 
-#testing database adding
-# test_object = {
-#     '_id': 'tuesday',
-#     'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
-# }
-# test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+# testing database adding
+test_object = {
+    '_id': 'wuesday',
+    'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+}
+#test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
 # test_date = 'tuesday'
 # insertion = {
 #     test_date: test_object
 # }
 
 
-# print(ZotdropsCollection.insert_one(test_object))
+#print(ZotdropsCollection.insert_one(test_object))
+
 
 
 ''' petr droppers'''
