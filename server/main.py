@@ -29,7 +29,7 @@ def drop():
     
     drops_dict[date] = Drop(time, dropper_name, location_name, location_coordinates)
         
-    
+
 '''TODO MAP STUFF'''
 
 # calendar of upcoming petrdrops
@@ -62,17 +62,15 @@ class Drop:
 
 ''' petr droppers'''
 
-# make account
+# admin account login
 
-
-# @app.route("/signup", methods=["POST"])
-# def signup():
-#     if (request.form["username"] and request.form["password"]):
-#         users[str(request.form["username"])] = str(request.form["password"])
-#         return "200"
-#     else:
-#         return "400"
-
+@app.route("/signin", methods=["POST"])
+def signin():
+    if request.form['username'] == 'admin':
+        if request.form['password'] == 'admin':
+            return "200"
+    return '403'
+    
 # @app.route("/verify", methods=["POST"])
 # def verify():
 #     if (users[request.form['username']] != None):
