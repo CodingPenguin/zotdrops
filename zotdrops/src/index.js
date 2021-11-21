@@ -5,12 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DatesCalendar from './DatesCalendar';
 import About from './About';
+import AreYouPetr from './AreYouPetr';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <DatesCalendar />
     <About />
+    <AreYouPetr />
   </React.StrictMode>,
   document.getElementById('root')
 );
