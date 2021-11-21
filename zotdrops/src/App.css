@@ -1,5 +1,13 @@
+body {
+  background-image:#588FB7; 
+  background-image: linear-gradient(to bottom right,#459FE0, #D2E7F6);
+  height: calc(100vh);
+}
+
 .App {
   text-align: center;
+  color: white;
+  background-image: linear-gradient(to bottom right,#459FE0, #D2E7F6);
 }
 
 .App-logo {
@@ -36,4 +44,151 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.live-drop{
+  padding: 50px 0px;
+  margin: 50px
+}
+
+.date-entry{
+  color: white;
+  font-size: 20px;
+  padding: 10px 38px;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.drop-table {
+  display: flex;
+  align-items: center;
+  width: '100%';
+  flex-direction: column;
+  justify-content: center;
+  position: center;
+  padding: 0px 30px;
+  
+}
+
+
+.table-header {
+  color: white;
+  font-size: 20px;
+  padding: 10px 30px;
+}
+
+.header {
+  width: '100%';
+  padding: 25px 0px;
+  margin: 50px 0px;
+}
+
+.navbar {
+  text-decoration: none;
+  color: white;
+}
+
+#title {
+  display: flex;
+  justify-content: left;
+  font-size: 70px;
+  align-items: left;
+  padding: 5px 60px;
+  float: left;
+  width: '100vh';
+}
+
+.zotdrop-style{ 
+  display: flex;
+  justify-content: left;
+  font-size: 50px;
+  align-items: left;
+  padding: 5px 20px;
+
+}
+
+#about { 
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  float: right;
+  padding: 40px 60px;
+  width: '50vh';
+  font-size: 20px;
+}
+
+.about-style{ 
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  float: right;
+  padding: 5px 20px;
+}
+
+.petr-page-link {
+  padding: 5px 0px;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-color: white;
+}
+
+.are-you-petr {
+  margin: 150px 0px;
+  padding: 100px 0px;
+  font-family: "Montserrat";
+}
+
+.petr-page-link {
+  margin: 100px 0px;
+  padding: 20px 0px;
+  font-family: "Montserrat";
+}
+
+.sign-in-page{
+  height: calc(100vh);
+  padding: 50px 0px;
+  margin: 10px
+}
+
+.AdminButton {
+  background-color: #FFC530;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.AdminButton:hover {
+  background-color: #FFD15A;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#admin-button {
+    padding: 0px 40px;
+  font-family: "Montserrat",
+}
+
+.upcoming-drops-comp {
+  padding: 50px 0px;
+}
+
+.sign-in-page{
+  height: calc(100vh);
+  padding: 50px 0px;
+  margin: 10px
+}
+
+.sign-in-title{
+  font-size: 35px;
+}
+
+.username-style{
+  font-size: 20px;
+}
+
+.password-style{
+  font-size: 20px;
 }

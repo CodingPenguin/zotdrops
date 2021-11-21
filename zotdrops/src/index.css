@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-family: Montserrat;
+  font-size: 200%;
+}
+
+h2 {
+  font-family: Montserrat,
+}
+
+h3 {
+  font-family: Montserrat,
+}
+
+h4 {
+  font-family: Montserrat,
+}
+
+.navbar-link {
+  font-size: 20px,
+}
+
+.header2 {
+  font-size: 40px;
+  padding: 50px 0px;
+}
+p.description {
+  max-width: 400px;
+  margin: 0 auto;
+}
+p {
+  /* padding: 0px 400px; */
+  font-size: 20px;
+}
+
+.live-drop-div {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+
+.live-drop-p {
+  text-align: left;
+  font-size: 25px;
+}
