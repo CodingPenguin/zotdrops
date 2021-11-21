@@ -23,7 +23,7 @@ function FormMap() {
       <div class='grandparent-wrapper'>
         <div class="parent-wrapper">
           <div class='wrapper'>
-            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={style} >
+            <MapContainer center={[33.6461, -117.8427]} zoom={15} scrollWheelZoom={false} style={style} >
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -54,7 +54,7 @@ function FormMap() {
               <input></input>
               <label class='card__form__label'>Location Name</label>
               <input></input>
-
+              <button class='submit'>Submit</button>
             </form>
           </div>
         </div>
