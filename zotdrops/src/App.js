@@ -18,16 +18,11 @@ function App() {
   const style = {
     height: "50vh",
     width: "50vh",
-
-  }
-
-  const petrStyle = {
-    height: "50px",
-    width: "50px",
   }
 
   return (
     <div className="App">
+<<<<<<< HEAD
         <Router>
         <NavBar />
           <Routes>
@@ -38,6 +33,29 @@ function App() {
           </Routes>
 
         </Router>
+=======
+      <MapContainer center={[33.6461, -117.8427]} zoom={13} scrollWheelZoom={false} style={style} >
+        <TileLayer
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {/* <Marker position={[51.505, -0.09]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+        <Marker position={[31.505, -0.09]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        
+        </Marker> */}
+        {/* <Locationfinder /> */}
+        <ReceiveDrop/>
+      </MapContainer>
+
+      <CurrentDropContainer />
+>>>>>>> 2435a09c6c80c34b01e48b4243d1de686c537dbe
     </div>
 
   );
