@@ -23,7 +23,7 @@ function HomePage() {
     return (
         <div class='yes'>
           <div class='map-wrapper'>
-            <MapContainer center={[33.6461, -117.8427]} zoom={13} scrollWheelZoom={false} style={style} >
+            <MapContainer center={[33.6461, -117.8427]} zoom={15} scrollWheelZoom={false} style={style} >
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -82,7 +82,7 @@ function FormMap() {
               <h1>Drop Info</h1>
               <label class='card__form__label'>Date</label>
 
-              <input type='text' name='date' onChange={inputsHandler} value={inputField.date}/>
+              <input class='card__form__textbox' type='text' name='date' onChange={inputsHandler} value={inputField.date}/>
 
               <label class='card__form__label'>Time</label>
               <input class='card__form__textbox' type='text' name='time' onChange={inputsHandler} value={inputField.time}/>
@@ -92,7 +92,7 @@ function FormMap() {
               
               <label class='card__form__label'>Location Name</label>
               <input class='card__form__textbox' type='text' name='locationName' onChange={inputsHandler} value={inputField.locationName}/>
-              <button class='' onClick={submitButton}>Submit</button>
+              <button class='submit' onClick={submitButton}>Submit</button>
             </div>
           </div>
         </div>

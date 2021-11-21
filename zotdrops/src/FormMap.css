@@ -1,8 +1,10 @@
 .grandparent-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 125px;
-  margin-bottom: 125px;
+  margin-top: 200px;
+  background-image: linear-gradient(to bottom right,#459FE0, #D2E7F6);
+  height: calc(100vh);
+  
 }
 
 .parent-wrapper {
@@ -25,6 +27,7 @@
 
 h1 {
   color: black;
+  font-family: Montserrat;
 }
 .card {
   background: white;

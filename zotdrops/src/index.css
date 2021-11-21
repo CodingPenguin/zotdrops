@@ -47,12 +47,15 @@ p {
 }
 
 .live-drop-div {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  /* display: grid;
   grid-template-columns: 2fr 1fr;
-  column-gap: 20px;
+  column-gap: 20px; */
 }
 
 .live-drop-p {
   text-align: left;
   font-size: 25px;
 }
+

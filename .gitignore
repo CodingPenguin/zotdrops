@@ -1,2 +1,3 @@
 server/env/lib
 server/__pycache__/*
+server/__pycache__/main.cpython-39.pyc
