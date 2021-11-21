@@ -1,1 +1,2 @@
 server/env/lib
+server/__pycache__/*

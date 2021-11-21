@@ -3,6 +3,7 @@ import CurrentDropContainer from "./components/CurrentDropContainer";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import ReceiveDrop from "./components/ReceiveDrop";
 import './App.css';
+import NewComponent from './NewComponent';
 
 
 function App() {
