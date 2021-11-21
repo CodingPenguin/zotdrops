@@ -4,9 +4,11 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvent } from 'react-leafl
 function Locationfinder() {
     const [data, setData] = useState([[51.509, -0.09]]);
     const map = useMapEvent('click', (e) => {
-      // map.setCenter([50.5, 30.5])
       console.log(e.latlng);
+      //send request to server
       setData([...data, e.latlng]);
+      //send e.latlng to server
+      // fetch(serverUrl + '/addDrop?lat=' + 50 + 'lng=' + 23)
     })
     function hi(e) {
       return <Marker key={e[0]} position={e}>
