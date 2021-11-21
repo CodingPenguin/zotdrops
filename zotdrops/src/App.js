@@ -1,3 +1,7 @@
+import Locationfinder  from "./components/Locationfinder";
+import CurrentDropContainer from "./components/CurrentDropContainer";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import ReceiveDrop from "./components/ReceiveDrop";
 import './App.css';
 import HomePage from './HomePage';
 import About from './About';
@@ -9,7 +13,19 @@ import {
   Route
 } from "react-router-dom"
 
+
 function App() {
+  const style = {
+    height: "50vh",
+    width: "50vh",
+
+  }
+
+  const petrStyle = {
+    height: "50px",
+    width: "50px",
+  }
+
   return (
     <div className="App">
         <Router>
@@ -23,7 +39,9 @@ function App() {
 
         </Router>
     </div>
+
   );
 }
 
 export default App;
+
