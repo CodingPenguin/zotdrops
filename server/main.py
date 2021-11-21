@@ -14,16 +14,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-drops_dict: dict = defaultdict(list)
-
-# request.form = {
-#     'date': '',
-#     'time': '',
-#     'name': '',
-#     'location_name': '',
-#     'location_coords': ''
-# }
-
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
@@ -38,12 +28,16 @@ def drop():
         return json.dumps(collection_list)
     
     if request.method == 'POST':
-        date = request.form['date']
-        time = request.form['time']
-        dropper_name = request.form['dropperName']
-        location_name = request.form['locationName']
-        location_coordinates = request.form['locationCoords']
-        
+        # date = request.form['date']
+        # time = request.form['time']
+        # dropper_name = request.form['dropperName']
+        # location_name = request.form['locationName']
+        # location_coordinates = request.form['locationCoords']
+        date = request.json['date']
+        time = request.json['time']
+        dropper_name = request.json['dropperName']
+        location_name = request.json['locationName']
+        location_coordinates = request.json['locationCoords']
         if ZotdropsCollection.find_one({'_id': date}):
             #update
             update_object = \
@@ -57,8 +51,8 @@ def drop():
                     'longitude': location_coordinates['lng']
                     }
             }
-            ZotdropsCollection.update_one({'_id': date}, {'$push': {'drops': update_object }})
-            
+            ZotdropsCollection.update_one({'_id': date}, {'$push': {'drops': update_object}})
+            return '200'
         else:
             #insert
             insert_object = \
@@ -79,6 +73,7 @@ def drop():
                 ]
             }
             ZotdropsCollection.insert_one(insert_object)
+            return '200'
             
             
         #drops_dict[date].append({'time': time, 'dropper_name': dropper_name, 'location_name': location_name, 'location_coordinate':location_coordinates})
@@ -120,10 +115,10 @@ def signin():
 
 
 # testing database adding
-test_object = {
-    '_id': 'wuesday',
-    'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
-}
+# test_object = {
+#     '_id': 'wuesday',
+#     'drops' : [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
+# }
 #test_object = [{'time': '12:00', 'dropper_name':'petr', 'location_name':'dbh', 'location_coordinates':{'latitude':'north', 'longitude':'west'}}]
 # test_date = 'tuesday'
 # insertion = {
