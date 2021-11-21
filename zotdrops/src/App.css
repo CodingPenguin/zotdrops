@@ -1,13 +1,13 @@
 body {
   background-image:#588FB7; 
-  background-image: linear-gradient(to bottom right,#588FB7, #B1CEE3);
+  background-image: linear-gradient(to bottom right,#459FE0, #D2E7F6);
   height: calc(100vh);
 }
 
 .App {
-  text-align: Left;
+  text-align: center;
   color: white;
-  background-image: linear-gradient(to bottom right,#588FB7, #B1CEE3 );
+  background-image: linear-gradient(to bottom right,#459FE0, #D2E7F6);
 }
 
 .App-logo {
@@ -45,6 +45,15 @@ body {
   }
 }
 
+.date-entry{
+  color: white;
+  font-size: 20px;
+  padding: 10px 38px;
+  align-items: center;
+  flex-direction: column;
+
+}
+
 .drop-table {
   display: flex;
   align-items: center;
@@ -55,7 +64,10 @@ body {
   
 }
 
+
 .table-header {
   color: white;
+  font-size: 35px;
+  padding: 10px 15px;
 }
 
