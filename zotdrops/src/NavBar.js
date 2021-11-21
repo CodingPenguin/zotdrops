@@ -14,6 +14,9 @@ function NavBar() {
                 <div class= "about-style">
                     <a href="./#about-comp" class="navbar" id="about">About</a>
                 </div>
+                <div class= "about-style">
+                    <a href="./form" class="navbar" id="about">Petr Form</a>
+                </div>
         </div>
     );
 }

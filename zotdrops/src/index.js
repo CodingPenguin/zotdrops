@@ -7,14 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
     <App />
-=======
-    {/* <App /> */}
-    <FormMap />
-    {/* <DatesCalendar />
-    <About /> */}
->>>>>>> 2435a09c6c80c34b01e48b4243d1de686c537dbe
   </React.StrictMode>,
   document.getElementById('root')
 );

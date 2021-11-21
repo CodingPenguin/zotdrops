@@ -23,6 +23,9 @@
   width: 100%;
 }
 
+h1 {
+  color: black;
+}
 .card {
   background: white;
   text-align: center;
