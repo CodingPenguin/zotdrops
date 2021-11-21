@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import ReceiveDrop from "./components/ReceiveDrop";
 import './FormMap.css';
 import NewComponent from './NewComponent';
+import { useState } from "react";
+import axios from 'axios';
 
 
 function FormMap() {
@@ -17,6 +19,38 @@ function FormMap() {
     height: "50px",
     width: "50px",
   }
+
+    const [inputField , setInputField] = useState({
+      date: '',
+      time: '',
+      dropName: '',
+      locationName: ''
+    })
+
+    const [mapData, setMapData] = useState([]);
+    const inputsHandler = (e) =>{
+        setInputField(prev => ({...prev, [e.target.name]: e.target.value}) )
+    }
+  
+    const submitButton = () =>    { 
+      const payload = {
+        'date': inputField.date,
+        'time': inputField.time,
+        'dropperName': inputField.dropName,
+        'locationName': inputField.locationName,
+        'locationCoords': {
+          'lat': mapData[0]['lat'],
+          'lng': mapData[0]['lng']
+        }
+      }
+
+      console.log(payload);
+
+      axios.post('http://127.0.0.1:5000/drops', payload)
+      .then((response) => {
+        console.log(response)
+      })
+    }
 
   return (
     <div className="FormMap">
@@ -39,23 +73,27 @@ function FormMap() {
                 </Popup>
               
               </Marker> */}
-              <Locationfinder />
+              <Locationfinder mapData={mapData} setMapData={setMapData}/>
             </MapContainer>
           </div>
         <div id='card-container' class='wrapper'>
           <div class='card'>
-            <form id='form' class='card__form'>
+            <div id='form' class='card__form'>
               <h1>Drop Info</h1>
               <label class='card__form__label'>Date</label>
-              <input class="card__form__textbox"></input>
+
+              <input type='text' name='date' onChange={inputsHandler} value={inputField.date}/>
+
               <label class='card__form__label'>Time</label>
-              <input class="card__form__textbox"></input>
+              <input class='card__form__textbox' type='text' name='time' onChange={inputsHandler} value={inputField.time}/>
+
               <label class='card__form__label'>Drop Name</label>
-              <input class="card__form__textbox"></input>
+              <input class='card__form__textbox' type='text' name='dropName' onChange={inputsHandler} value={inputField.dropName}/>
+              
               <label class='card__form__label'>Location Name</label>
-              <input class="card__form__textbox"></input>
-              <button class='submit'>Submit</button>
-            </form>
+              <input class='card__form__textbox' type='text' name='locationName' onChange={inputsHandler} value={inputField.locationName}/>
+              <button class='' onClick={submitButton}>Submit</button>
+            </div>
           </div>
         </div>
         </div>

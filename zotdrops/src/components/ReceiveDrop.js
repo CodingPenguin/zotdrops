@@ -96,11 +96,11 @@ function ReceiveDrop() {
                 console.log(long);
                 let coordinates = [lat, long];
                 serverData.push(coordinates);
-
+            
               }
             }
           }
-          // setPositions(serverData);
+          setPositions(serverData);
           console.log(serverData);
 
         })

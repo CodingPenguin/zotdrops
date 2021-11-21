@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={style} >
+      <MapContainer center={[33.6461, -117.8427]} zoom={13} scrollWheelZoom={false} style={style} >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -30,7 +30,7 @@ function App() {
           </Popup>
         
         </Marker> */}
-        <Locationfinder />
+        {/* <Locationfinder /> */}
         <ReceiveDrop/>
       </MapContainer>
 
