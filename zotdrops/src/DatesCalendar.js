@@ -40,6 +40,14 @@ function DatesCalendar() {
 
     let combinedDates = [];
 
+    function UpcomingDropsTitle() {
+        return(
+            <h2>Upcoming Drops</h2>
+        );
+    }
+
+    combinedDates.push(<UpcomingDropsTitle />)
+
     for (let i = 0; i < formattedDates.length; i++) {
         combinedDates.push(<UpcomingDate date={formattedDates[i][0]} time = {formattedDates[i][1]} petrSticker = {formattedDates[i][2]} />)
     }
