@@ -1,17 +1,19 @@
 import React from "react";
+import './App.css';
 import { 
     Link
 } from "react-router-dom"
+import App from "./App";
 
 function NavBar() {
     return (
         <div>
-            <li>
-                <Link to="/">ZotDrops</Link>
-            </li>
-            <li>
-                <Link to="/about">About</Link>
-            </li>
+                <h3>
+                    <Link to="/" class="navbar-title">ZotDrops</Link>
+                </h3>
+                <h3>
+                    <Link to="/about" class="navrbar-link">About</Link>
+                </h3>
         </div>
     );
 }

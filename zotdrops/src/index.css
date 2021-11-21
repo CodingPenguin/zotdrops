@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-family: Montserrat;
+  font-size: 200%;
+}
+
+h2 {
+  font-family: Montserrat,
+}
+
+h3 {
+  font-family: Montserrat,
+}
+
+h4 {
+  font-family: Montserrat,
+}
+
+.navbar-link {
+  font-size: 20px,
+}

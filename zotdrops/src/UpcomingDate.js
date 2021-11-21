@@ -3,11 +3,11 @@ import React from "react";
 function UpcomingDate(props) {
     // props.date, props.time, props.petrSticker
     return ( 
-        <div>
-            <h4> 
-            {props.date} {props.time} {props.petrSticker}
-            </h4>
-        </div>
+        <tr>
+            <td class= "date-entry"> {props.date} </td>
+            <td class= "date-entry"> {props.time} </td>
+            <td class= "date-entry"> {props.petrSticker} </td>
+        </tr>
     );
 }
 

@@ -1,5 +1,13 @@
+body {
+  background-image:#588FB7; 
+  background-image: linear-gradient(to bottom right,#588FB7, #B1CEE3);
+  height: calc(100vh);
+}
+
 .App {
-  text-align: center;
+  text-align: Left;
+  color: white;
+  background-image: linear-gradient(to bottom right,#588FB7, #B1CEE3 );
 }
 
 .App-logo {
@@ -36,3 +44,18 @@
     transform: rotate(360deg);
   }
 }
+
+.drop-table {
+  display: flex;
+  align-items: center;
+  width: '100%';
+  flex-direction: column;
+  justify-content: center;
+  position: center;
+  
+}
+
+.table-header {
+  color: white;
+}
+
