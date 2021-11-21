@@ -15,8 +15,8 @@ function App() {
         <Router>
         <NavBar />
           <Routes>
-            <Route path="/" element = {<HomePage />} />
-            <Route path="/about" element = {<About />} />
+            <Route class= "zotdrop-style" path="/" element = {<HomePage />} />
+            <Route class = "about-style" path="/about" element = {<About />} />
             <Route path="/signin" element = {<SignIn />} />
           </Routes>
         </Router>

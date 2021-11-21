@@ -7,13 +7,13 @@ import App from "./App";
 
 function NavBar() {
     return (
-        <div>
-                <h3>
-                    <Link to="/" class="navbar-title">ZotDrops</Link>
-                </h3>
-                <h3>
-                    <Link to="/about" class="navrbar-link">About</Link>
-                </h3>
+        <div class="header">
+                <div>
+                    <Link to="/" class="navbar" id="title">ZotDrops</Link>
+                </div>
+                <div class= "about-style">
+                    <Link to="/about" class="navbar" id="about">About</Link>
+                </div>
         </div>
     );
 }

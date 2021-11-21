@@ -2,7 +2,7 @@ import React from "react";
 
 function LiveDrop() {
     return (
-        <div>
+        <div className = "live-drop">
             <h2>LIVE: Today's Drop</h2>
             <h4>Time: 2:00PM</h4>
             <h4>Location: ?</h4>
