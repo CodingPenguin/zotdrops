@@ -1,0 +1,38 @@
+.grandparent-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.parent-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 544px;
+  width: 80%;
+}
+
+#card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  background: white;
+  text-align: center;
+  padding: 16px 33px;
+  border-radius: 5px;
+  box-shadow: 0px 12px 8px rgb(0 0 0 / 38%);
+  width: 450px;
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  position: relative;
+}

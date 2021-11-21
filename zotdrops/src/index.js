@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import FormMap from './FormMap';
 import reportWebVitals from './reportWebVitals';
 import DatesCalendar from './DatesCalendar';
 import About from './About';
@@ -9,6 +10,7 @@ import About from './About';
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <FormMap />
     <DatesCalendar />
     <About />
   </React.StrictMode>,
