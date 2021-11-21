@@ -32,3 +32,11 @@ h4 {
 .navbar-link {
   font-size: 20px,
 }
+
+.header2 {
+  font-size: 40px;
+}
+
+p {
+  padding: 0px 300px;
+}

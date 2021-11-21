@@ -45,7 +45,7 @@ body {
   }
 }
 
-.className{
+.live-drop{
   padding: 50px 0px;
   margin: 50px
 }
@@ -66,14 +66,15 @@ body {
   flex-direction: column;
   justify-content: center;
   position: center;
+  padding: 0px 30px;
   
 }
 
 
 .table-header {
   color: white;
-  font-size: 35px;
-  padding: 10px 15px;
+  font-size: 20px;
+  padding: 10px 30px;
 }
 
 .header {
@@ -90,7 +91,7 @@ body {
 #title {
   display: flex;
   justify-content: left;
-  font-size: 50px;
+  font-size: 70px;
   align-items: left;
   padding: 5px 20px;
   float: left;
@@ -121,4 +122,44 @@ body {
   justify-content: right;
   float: right;
   padding: 5px 20px;
+}
+
+.petr-page-link {
+  padding: 5px px;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-color: white;
+}
+
+.are-you-petr {
+  margin: 150px 0px;
+  padding: 100px 0px;
+  font-family: "Montserrat";
+}
+
+.petr-page-link {
+  margin: 100px 0px;
+  padding: 20px 0px;
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+
+.sign-in-page{
+  height: calc(100vh);
+  padding: 50px 0px;
+  margin: 10px
+}
+
+.AdminButton {
+  background-color: #FFC530;
+  border: none;
+  border-radius: 10px;
+}
+
+#admin-button {
+  font-family: "Montserrat",
+}
+
+.upcoming-drops-comp {
+  padding: 50px 0px;
 }

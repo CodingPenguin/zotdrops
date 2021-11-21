@@ -45,8 +45,8 @@ function DatesCalendar() {
     }
 
     return ( 
-        <>
-            <h2>Upcoming Drops</h2>
+        <div className = "upcoming-drops-comp">
+            <h2 className = "header2">Upcoming Drops</h2>
             <table class="drop-table">
                 <thead>
                     <th scope = "col" class = "table-header"> Date</th>
@@ -57,7 +57,7 @@ function DatesCalendar() {
                     {combinedDates}
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }
 

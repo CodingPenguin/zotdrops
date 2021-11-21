@@ -2,15 +2,16 @@ import React from "react";
 import { 
     Link
 } from "react-router-dom";
+import './App.css'
 
 function AreYouPetr() {
     return ( 
-        <div> 
-            <h2>Are You Petr?</h2>
-            <p> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <Link to = "/signin">Petr Page</Link>
+        <div className = "are-you-petr">
+            <Link to = "/signin" className="petr-page-link">
+                <button buttonType="button" class="AdminButton">
+                    <p id="admin-button">Admin Sign In</p>
+                </button>
+            </Link>
         </div>
     )
 }

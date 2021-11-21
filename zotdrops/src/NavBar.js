@@ -9,7 +9,7 @@ function NavBar() {
     return (
         <div class="header">
                 <div>
-                    <Link to="/" class="navbar" id="title">ZotDrops</Link>
+                    <Link to="/" class="navbar" id="title"><b>ZotDrops</b></Link>
                 </div>
                 <div class= "about-style">
                     <Link to="/about" class="navbar" id="about">About</Link>

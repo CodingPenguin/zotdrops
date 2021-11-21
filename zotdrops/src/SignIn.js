@@ -3,7 +3,7 @@ import SignInBox from './SignInBox'
 
 function SignIn() {
     return (
-        <div>
+        <div className = "sign-in-page">
             <SignInBox />
         </div>
     );
