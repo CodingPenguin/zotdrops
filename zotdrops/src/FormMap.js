@@ -47,13 +47,13 @@ function FormMap() {
             <form id='form' class='card__form'>
               <h1>Drop Info</h1>
               <label class='card__form__label'>Date</label>
-              <input></input>
+              <input class="card__form__textbox"></input>
               <label class='card__form__label'>Time</label>
-              <input></input>
+              <input class="card__form__textbox"></input>
               <label class='card__form__label'>Drop Name</label>
-              <input></input>
+              <input class="card__form__textbox"></input>
               <label class='card__form__label'>Location Name</label>
-              <input></input>
+              <input class="card__form__textbox"></input>
               <button class='submit'>Submit</button>
             </form>
           </div>

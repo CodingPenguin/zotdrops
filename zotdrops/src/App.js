@@ -10,12 +10,6 @@ function App() {
   const style = {
     height: "50vh",
     width: "50vh",
-
-  }
-
-  const petrStyle = {
-    height: "50px",
-    width: "50px",
   }
 
   return (
@@ -40,7 +34,7 @@ function App() {
         <ReceiveDrop/>
       </MapContainer>
 
-      <CurrentDropContainer style={petrStyle} />
+      <CurrentDropContainer />
     </div>
 
   );

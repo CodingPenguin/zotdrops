@@ -9,10 +9,10 @@ import About from './About';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     <FormMap />
-    <DatesCalendar />
-    <About />
+    {/* <DatesCalendar />
+    <About /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
