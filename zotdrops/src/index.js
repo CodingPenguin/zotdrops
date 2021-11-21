@@ -3,16 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DatesCalendar from './DatesCalendar';
-import About from './About';
-import AreYouPetr from './AreYouPetr';
+import HomePage from './HomePage';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <DatesCalendar />
-    <About />
-    <AreYouPetr />
+    <HomePage />
   </React.StrictMode>,
   document.getElementById('root')
 );
