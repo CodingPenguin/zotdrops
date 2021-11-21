@@ -17,8 +17,10 @@ function App() {
           <Routes>
             <Route class= "zotdrop-style" path="/" element = {<HomePage />} />
             <Route class = "about-style" path="/about" element = {<About />} />
+
             <Route path="/signin" element = {<SignIn />} />
           </Routes>
+
         </Router>
     </div>
   );

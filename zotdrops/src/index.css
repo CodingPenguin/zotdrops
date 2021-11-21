@@ -35,8 +35,23 @@ h4 {
 
 .header2 {
   font-size: 40px;
+  padding: 50px 0px;
+}
+p.description {
+  max-width: 400px;
+  margin: 0 auto;
+}
+p {
+  /* padding: 0px 400px; */
+  font-size: 20px;
 }
 
-p {
-  padding: 0px 300px;
+.live-drop-div {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+
+.live-drop-p {
+  text-align: left;
 }

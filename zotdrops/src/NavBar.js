@@ -12,7 +12,7 @@ function NavBar() {
                     <Link to="/" class="navbar" id="title"><b>ZotDrops</b></Link>
                 </div>
                 <div class= "about-style">
-                    <Link to="/about" class="navbar" id="about">About</Link>
+                    <a href="./#about-comp" class="navbar" id="about">About</a>
                 </div>
         </div>
     );
