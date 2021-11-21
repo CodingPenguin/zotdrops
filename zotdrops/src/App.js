@@ -1,7 +1,8 @@
 import './App.css';
 import HomePage from './HomePage';
-import SignIn from './SignIn';
+import About from './About';
 import NavBar from './NavBar';
+import SignIn from './SignIn';
 import { 
   BrowserRouter as Router,
   Routes,
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
           <Routes>
             <Route path="/" element = {<HomePage />} />
+            <Route path="/about" element = {<About />} />
             <Route path="/signin" element = {<SignIn />} />
           </Routes>
         </Router>

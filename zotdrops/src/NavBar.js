@@ -10,7 +10,7 @@ function NavBar() {
                 <Link to="/">ZotDrops</Link>
             </li>
             <li>
-                <Link to="/signin">Sign In</Link>
+                <Link to="/about">About</Link>
             </li>
         </div>
     );
